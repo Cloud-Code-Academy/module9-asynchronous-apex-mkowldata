@@ -21,13 +21,13 @@
 public with sharing class NextStepBatch implements Database.Batchable<sObject>{
 
     public Database.QueryLocator start(Database.BatchableContext bc){
-        System.debug('Batch start method called');
+        //System.debug('Batch start method called');
         // Query for all accounts and return the query locator.
         return Database.getQueryLocator([SELECT Id, Next_Step__c From Account]); // Update null with the query locator
     }
     
     public void execute(Database.BatchableContext bc, List<Account> scope){
-        System.debug('Batch execute method called scop size: ' + scope.size());
+        //System.debug('Batch execute method called scop size: ' + scope.size());
         final String BATCH_NEXT_STEP = 'Batching the next meetings together.';
 
         // Update the Next Step field on each record in the batch scope.
@@ -52,7 +52,7 @@ public with sharing class NextStepBatch implements Database.Batchable<sObject>{
     }
     
     public void finish(Database.BatchableContext bc){
-        System.debug('Batch finish method called');
+        //System.debug('Batch finish method called');
         final List<User> USERS = [SELECT Id, Name, Email FROM User WHERE IsActive = true AND (NOT Email LIKE 'autoproc%')]; // DO NOT CHANGE
 
         // Get the email addresses of all active users

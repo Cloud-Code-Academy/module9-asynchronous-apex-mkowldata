@@ -38,8 +38,8 @@ public with sharing class NextStepQueueable implements Queueable{
         //Map<Id,Account> accountMap = new Map<Id,Account>();
         if(!accountMap.isEmpty()){
             // If there are any accounts, queue the job using System.enqueueJob
-            System.debug('Accounts found: ' + accountMap.size());
-            System.enqueueJob(new NextStepQueueable(accountMap)); 
+            //System.debug('Accounts found: ' + accountMap.size());
+            //System.enqueueJob(new NextStepQueueable(accountMap)); 
         }  
     }
     
@@ -49,7 +49,7 @@ public with sharing class NextStepQueueable implements Queueable{
      * Method to execute the queueable job
      */
     public void execute (QueueableContext context) {
-        System.debug('QueueableContext executed!');
+        //System.debug('QueueableContext executed!');
         // Get the accounts from the member variable
         for(Account acc : accounts.values()) {
             // Remove the Next Step using the helper method

@@ -28,7 +28,7 @@ public with sharing class NextStepSchedule implements Schedulable{
      * Code to execute the batch job should not need to change other than uncommenting the code
      */
     public void execute (SchedulableContext sc) {
-        System.debug('Scheduled Job Started');
+        //System.debug('Scheduled Job Started');
         NextStepBatch batch = new NextStepBatch(); 
         Database.executeBatch(batch);
     }

@@ -83,7 +83,7 @@ public with sharing class NextStepFuture {
     @future
     public static void updateUserRoleName(List<Id> roleId){
         List<UserRole> roles = [SELECT Id, portalType, CaseAccessForAccountOwner, Name FROM UserRole WHERE Id IN :roleId ];
-        System.debug('udateUserRoleNames called for users ' + roles);
+        //System.debug('udateUserRoleNames called for users ' + roles);
         UserRole role;
             if(roles.isEmpty()){
                 role = new UserRole();

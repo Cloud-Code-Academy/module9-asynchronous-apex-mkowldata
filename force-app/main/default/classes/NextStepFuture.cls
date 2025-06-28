@@ -74,7 +74,6 @@ public with sharing class NextStepFuture {
         opp.Name = 'Big Deal';
         opp.StageName = 'Closed Won'; 
         opp.CloseDate = Date.today();
-        
         insert opp;
     }
 
@@ -89,14 +88,11 @@ public with sharing class NextStepFuture {
                 role = new UserRole();
                 role.portalType = 'None'; 
                 role.CaseAccessForAccountOwner = 'Edit';
-            
             // role.OpportunityAccessForAccountOwner = 'Edit'; //This may need to be uncommented depending on your orgs Organization Wide Defaults(OWD) settings. If you are receiving FIELD_INTEGRITY_EXCEPTION, field integrity exception: unknown (Opportunity access level below organization default): [unknown], uncomment this line.
             } else {
             role = roles[0];
             }
-
         role.Name = 'CRO';
-
         upsert role;
     }
 }

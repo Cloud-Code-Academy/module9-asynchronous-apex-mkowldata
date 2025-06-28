@@ -18,7 +18,6 @@
  * Note: The class below contains placeholders for implementing a queueable job to update accounts and opportunities.
  */
 public with sharing class NextStepQueueable implements Queueable{
-
     // Member variable to store the accounts
     private Map<Id,Account> accounts;
 

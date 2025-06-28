@@ -31,7 +31,6 @@ public with sharing class NextStepBatch implements Database.Batchable<sObject>{
         final String BATCH_NEXT_STEP = 'Batching the next meetings together.';
 
         // Update the Next Step field on each record in the batch scope.
-
         // Loop through the scope account records
         for(Account acc : (List<Account>)scope){
             // Set the Next Step field to 'Batching the next meetings together.'

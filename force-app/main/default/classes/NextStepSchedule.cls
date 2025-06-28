@@ -20,7 +20,6 @@
  * Note: To make full use of this class, ensure that the NextStepBatch class is implemented and operational.
  */
 global with sharing class NextStepSchedule implements Schedulable{
-
     /*
      * Update/Uncomment the template code to create a method
      * Execute the batch job NextStepBatch using the Database.executeBatch method

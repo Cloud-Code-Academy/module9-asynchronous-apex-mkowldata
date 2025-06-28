@@ -18,7 +18,6 @@
  *       The accompanying test class 'AsynchronousTest' should also be updated to test this method.
  */
 public with sharing class NextStepFuture {
-
     /* 
      * Question 1
      * Update/Uncomment the template code to create a method

@@ -38,7 +38,7 @@ public with sharing class NextStepQueueable implements Queueable{
         if(!accountMap.isEmpty()){
             // If there are any accounts, queue the job using System.enqueueJob
             //System.debug('Accounts found: ' + accountMap.size());
-            //System.enqueueJob(new NextStepQueueable(accountMap)); 
+            System.enqueueJob(new NextStepQueueable(accountMap)); 
         }  
     }
     
